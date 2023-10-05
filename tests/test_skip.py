@@ -9,8 +9,7 @@ from selene import browser, be
 def browser_setup():
     browser.config.base_url = 'https://github.com/'
 
-#     browser.config.window_width = request.param[0]
-#     browser.config.window_height = request.param[1]
+
 @pytest.fixture(params=['desktop', 'mobile'])
 def browser_window_size(request):
     if request.param == 'desktop':
